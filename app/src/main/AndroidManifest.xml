@@ -32,6 +32,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
+        <activity
+            android:name="com.liyu.fakeweather.ui.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="E6rdq6U1vjjmTTglEtdX6fFbYTejWKEq"/>
@@ -39,6 +50,7 @@
         <activity
             android:name="com.liyu.fakeweather.ui.MainActivity"
             android:windowSoftInputMode="adjustNothing"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait">
         </activity>
 
@@ -108,15 +120,6 @@
             android:label="模块管理"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name="com.liyu.fakeweather.ui.SplashActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
 
     </application>
 

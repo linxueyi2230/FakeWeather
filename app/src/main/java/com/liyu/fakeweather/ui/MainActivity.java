@@ -51,7 +51,7 @@ public class MainActivity extends BaseActivity {
     private FragmentManager fragmentManager;
     private String currentFragmentTag;
 
-    private static final String FRAGMENT_TAG_BUS = "公交";
+//    private static final String FRAGMENT_TAG_BUS = "公交";
     private static final String FRAGMENT_TAG_WEATHER = "天气";
     private static final String FRAGMENT_TAG_GANK = "福利";
     private static final String FRAGMENT_TAG_READING = "闲读";
@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity {
                 List<Module> enabledModule = new ArrayList<>();
                 if (t == null || t.size() == 0) {
                     modules.add(new Module("天气", R.drawable.ic_weather, R.id.navigation_item_2, 0, true));
-                    modules.add(new Module("公交", R.drawable.ic_bus, R.id.navigation_item_1, 1, true));
+                    //modules.add(new Module("公交", R.drawable.ic_bus, R.id.navigation_item_1, 1, true));
                     modules.add(new Module("闲读", R.drawable.ic_reading, R.id.navigation_item_4, 2, true));
                     modules.add(new Module("福利", R.drawable.ic_gank, R.id.navigation_item_3, 3, true));
                     DataSupport.saveAll(modules);
@@ -118,8 +118,8 @@ public class MainActivity extends BaseActivity {
         switch (name) {
             case "天气":
                 return getResId(this, "ic_weather", "drawable");
-            case "公交":
-                return getResId(this, "ic_bus", "drawable");
+//            case "公交":
+//                return getResId(this, "ic_bus", "drawable");
             case "闲读":
                 return getResId(this, "ic_reading", "drawable");
             case "福利":
@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void loadData() {
-        UpdateUtil.check(MainActivity.this, true);
+        //UpdateUtil.check(MainActivity.this, true);
     }
 
     public void initDrawer(Toolbar toolbar) {
@@ -176,10 +176,10 @@ public class MainActivity extends BaseActivity {
                         @Override
                         public void onNext(Void aVoid) {
                             switch (menuItem.getItemId()) {
-                                case R.id.navigation_item_1:
-                                    menuItem.setChecked(true);
-                                    switchContent(FRAGMENT_TAG_BUS);
-                                    break;
+//                                case R.id.navigation_item_1:
+//                                    menuItem.setChecked(true);
+//                                    switchContent(FRAGMENT_TAG_BUS);
+//                                    break;
                                 case R.id.navigation_item_2:
                                     menuItem.setChecked(true);
                                     switchContent(FRAGMENT_TAG_WEATHER);
@@ -220,9 +220,9 @@ public class MainActivity extends BaseActivity {
 
         if (foundFragment == null) {
             switch (name) {
-                case FRAGMENT_TAG_BUS:
-                    foundFragment = new BusFragment();
-                    break;
+//                case FRAGMENT_TAG_BUS:
+//                    foundFragment = new BusFragment();
+//                    break;
                 case FRAGMENT_TAG_WEATHER:
                     foundFragment = new WeatherFragment();
                     break;
